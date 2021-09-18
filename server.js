@@ -5,7 +5,8 @@
 * (including web sites) or distributed to other students.
 *
 * Name: Tim Lin Student ID: 105586192 Date: 2021-09-17
-* Heroku Link: https://web422-tim.herokuapp.com/
+* Heroku Link: https://git.heroku.com/web422-tim.git
+
 *
 ********************************************************************************/ 
 
