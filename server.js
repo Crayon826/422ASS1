@@ -23,6 +23,15 @@ const cors = require('cors')
 
 app.use(express.json())
 app.use(cors())
+db.initialize(process.env.MONGODB_CONN_STRING)
+	.then(() => {
+		app.listen(process.env.HTTP_PORT, () => {
+			console.log(`server listening on: ${process.env.HTTP_PORT}`);
+		});
+	})
+	.catch(err => { 
+		console.log(err);
+	});
 app.get('/', async (req, res) => {
 	res.json({ message: 'API Listening' });
 });
@@ -99,12 +108,4 @@ app.use((err, req, res, next) => {
 	})
 })
 
-db.initialize(process.env.MONGODB_CONN_STRING)
-	.then(() => {
-		app.listen(process.env.HTTP_PORT, () => {
-			console.log(`server listening on: ${process.env.HTTP_PORT}`);
-		});
-	})
-	.catch(err => { 
-		console.log(err);
-	});
+
