@@ -21,10 +21,9 @@
  const dotenv = require("dotenv").config();
  const { query, validationResult } = require("express-validator");
  
- const mongoLogin = process.env.MONGODB_CONN_STRING;
+ const MONGO_URL = process.env.MONGODB_CONN_STRING;
  
- const connect = db
-   .initialize(mongoLogin)
+ db.initialize(MONGO_URL)
    .then(() => {
      app.listen(HTTP_PORT, () => {
        console.log(`server listening on: ${HTTP_PORT}`);
