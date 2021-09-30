@@ -8,7 +8,7 @@
 *
 * Github Link: https://github.com/Crayon826/422ASS1
 *
-* Heroku Link: https://web422-test2.herokuapp.com/
+* Heroku Link: https://web422-tim.herokuapp.com/
 *
 ********************************************************************************/ 
 
