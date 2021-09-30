@@ -57,7 +57,7 @@ app.get('/api/restaurants', [query('page'), query('perPage')], async (req, res, 
       return res.status(400).json({ errors: errors.array() });
     }
     const { page, perPage, borough } = req.query;
-    const allRestaurants = await db.getAllRestaurants(page, perPage, borough);
+    const allRestaurants = db.getAllRestaurants(page, perPage, borough);
     res.json({
       data: allRestaurants,
       message: 'success',
